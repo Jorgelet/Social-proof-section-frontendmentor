@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.wave-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.wave-top-desktop{
+    display: none;
+}
+
+.main{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.main__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+}
+
+.main__title{
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+.main__paragraph{
+    width: 90%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: hsl(303, 10%, 53%);
+    line-height: 22px;
+}
+
+.main__stars{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__review{
+    width: 90%;
+    height: 70px;
+    background-color: hsl(300, 24%, 96%);
+    color: hsl(300, 43%, 22%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+
+.costumer{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    position: relative;
+}
+
+.costumer__client{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    height: 240px;
+    padding: 0 1.7rem;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.costumer__container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.costumer__img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.costumer__description{
+    line-height: 20px;
+}
+
+.costumer__description--verified{
+    color: hsla(333, 80%, 67%, .8);
+}
+
+.costumer__words{
+    margin-top: 25px;
+    line-height: 22px;
+}
+
+.costumer__client--last{
+    margin-bottom: 40px;
+}
+
+.wave-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.wave-bottom-desktop{
+    display: none;
+}
+
+@media (min-width: 950px) {
+
+    .desktop{
+        width: 80vw;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .wave-top, .wave-bottom{
+        display: none;
+    }
+
+    .wave-top-desktop{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .wave-bottom-desktop{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .main{
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        overflow: hidden;
+        gap: 30px;
+    }
+    
+    .main__content{
+        align-items: start;
+        width: 45%;
+        padding: 10px;
+    }
+
+    .main__title {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+
+    .main__paragraph{
+        text-align: left;
+        font-size: 1rem;
+    }
+    
+    .main__stars{
+        width: 55%;
+    }
+
+    .main__review{
+        margin: 7px 0;
+        flex-direction: row;
+        justify-content: center;
+        height: 46px;
+        width: max-content;
+        padding: 27px;
+        column-gap: 20px;
+    }
+    
+    .main__review--left{
+        position: relative;
+        right: 45px;
+    }
+    
+    .main__review--right{
+        position: relative;
+        left: 45px;
+    }
+    
+    .star__title{
+        font-size: 94%;
+    }
+
+    .costumer{
+        flex-direction: row;
+        gap: 35px;
+        
+    }
+    
+    .costumer__client{
+        width: 340px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .costumer__words{
+        font-size: 95%;
+    }
+
+    .costumer__container{
+        align-self: flex-start;
+    }
+
+    .costumer__client--last{
+        position: relative;
+        top: 34px;
+    }
+
+    .costumer__client--first{
+        position: relative;
+        bottom: 15px;
+    }
+}
